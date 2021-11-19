@@ -34,6 +34,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         manager.desiredAccuracy = kCLLocationAccuracyBest
         //	con este metodo se ira actualizando la ubicacion del usuario
         manager.startUpdatingLocation()
+        mapMK.mapType = .satellite
     }
     
     func makeRoute(destinationCoordinates: CLLocationCoordinate2D) {
@@ -74,6 +75,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let render = MKPolylineRenderer(overlay: overlay as! MKPolyline)
         render.strokeColor = .blue
         return render
+    }
+    @IBAction func standarButton(_ sender: Any) {
+        mapMK.mapType = .standard
+    }
+    @IBAction func sateliteButton(_ sender: Any) {
+        mapMK.mapType = .satellite
     }
     
     @IBAction func ubicationButton(_ sender: UIBarButtonItem) {

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,6 +41,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Seeker" id="khk-7j-jEU">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Item" image="network" catalog="system" id="Nx3-Kw-7zr">
+                                <connections>
+                                    <action selector="sateliteButton:" destination="BYZ-38-t0r" id="kPg-nN-XDp"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" id="RgI-rx-YCO">
+                                <imageReference key="image" image="network" catalog="system" symbolScale="large" renderingMode="original"/>
+                                <connections>
+                                    <action selector="standarButton:" destination="BYZ-38-t0r" id="re3-0D-dve"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="location.fill" catalog="system" id="z5T-pv-27U">
                             <connections>
                                 <action selector="ubicationButton:" destination="BYZ-38-t0r" id="iUs-U7-78T"/>
@@ -76,6 +90,7 @@
     </scenes>
     <resources>
         <image name="location.fill" catalog="system" width="128" height="121"/>
+        <image name="network" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
